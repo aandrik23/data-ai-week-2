@@ -1,0 +1,2160 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='week2_17591034828520' path='/workbooks' revision='1.3' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='monthly_kpis' inline='true' name='federated.00klc5z0sxsw861fa80yw0i3jmkr' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='monthly_kpis' name='textscan.0gx5rnx1wh00p70zw4yi41ksc6qo'>
+            <connection class='textscan' directory='/Users/andreasrafailandrikopoulos/Zone/data-ai-week-2/exports' filename='monthly_kpis.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0gx5rnx1wh00p70zw4yi41ksc6qo' name='monthly_kpis.csv' table='[monthly_kpis#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='yyyymm' ordinal='0' />
+            <column datatype='real' name='total_call_minutes' ordinal='1' />
+            <column datatype='real' name='total_data_gb' ordinal='2' />
+            <column datatype='real' name='total_sms' ordinal='3' />
+            <column datatype='real' name='total_revenue' ordinal='4' />
+            <column datatype='integer' name='active_customers' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[monthly_kpis.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>yyyymm</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[yyyymm]</local-name>
+            <parent-name>[monthly_kpis.csv]</parent-name>
+            <remote-alias>yyyymm</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_kpis.csv_1E91D679251343ABA528E7E2472824D3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_call_minutes</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_call_minutes]</local-name>
+            <parent-name>[monthly_kpis.csv]</parent-name>
+            <remote-alias>total_call_minutes</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_kpis.csv_1E91D679251343ABA528E7E2472824D3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_data_gb</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_data_gb]</local-name>
+            <parent-name>[monthly_kpis.csv]</parent-name>
+            <remote-alias>total_data_gb</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_kpis.csv_1E91D679251343ABA528E7E2472824D3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_sms</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_sms]</local-name>
+            <parent-name>[monthly_kpis.csv]</parent-name>
+            <remote-alias>total_sms</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_kpis.csv_1E91D679251343ABA528E7E2472824D3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_revenue]</local-name>
+            <parent-name>[monthly_kpis.csv]</parent-name>
+            <remote-alias>total_revenue</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_kpis.csv_1E91D679251343ABA528E7E2472824D3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>active_customers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[active_customers]</local-name>
+            <parent-name>[monthly_kpis.csv]</parent-name>
+            <remote-alias>active_customers</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_kpis.csv_1E91D679251343ABA528E7E2472824D3]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Year Month' datatype='string' name='[Calculation_4154500345965322240]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR(INT([yyyymm] / 100)) + &quot;-&quot; + &#10;RIGHT(&quot;00&quot; + STR(INT([yyyymm] % 100)), 2)' />
+      </column>
+      <column caption='monthly_kpis.csv' datatype='table' name='[__tableau_internal_object_id__].[monthly_kpis.csv_1E91D679251343ABA528E7E2472824D3]' role='measure' type='quantitative' />
+      <column caption='Active Customers' datatype='integer' name='[active_customers]' role='measure' type='quantitative' />
+      <column caption='Total Call Minutes' datatype='real' name='[total_call_minutes]' role='measure' type='quantitative' />
+      <column caption='Total Data Gb' datatype='real' name='[total_data_gb]' role='measure' type='quantitative' />
+      <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+      <column caption='Total Sms' datatype='real' name='[total_sms]' role='measure' type='quantitative' />
+      <column caption='Yyyymm' datatype='integer' name='[yyyymm]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_4154500345965322240]' derivation='None' name='[none:Calculation_4154500345965322240:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/19/8zkztznj0cbbpxr3w_3sdrh80000gn/T/tableau-temp/#TableauTemp_1nmozs41jhbpe91et8hh410slzid.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/28/2025 11:35:48 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>yyyymm</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[yyyymm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>yyyymm</remote-alias>
+              <ordinal>0</ordinal>
+              <family>monthly_kpis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_call_minutes</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_call_minutes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_call_minutes</remote-alias>
+              <ordinal>1</ordinal>
+              <family>monthly_kpis.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_data_gb</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_data_gb]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_data_gb</remote-alias>
+              <ordinal>2</ordinal>
+              <family>monthly_kpis.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_sms</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_sms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_sms</remote-alias>
+              <ordinal>3</ordinal>
+              <family>monthly_kpis.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_revenue</remote-alias>
+              <ordinal>4</ordinal>
+              <family>monthly_kpis.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>active_customers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[active_customers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>active_customers</remote-alias>
+              <ordinal>5</ordinal>
+              <family>monthly_kpis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_4154500345965322240:nk]' palette='blue_10_0' type='palette'>
+            <map to='#2a5783'>
+              <bucket>&quot;2025-06&quot;</bucket>
+            </map>
+            <map to='#3e6c99'>
+              <bucket>&quot;2025-05&quot;</bucket>
+            </map>
+            <map to='#5081ae'>
+              <bucket>&quot;2025-04&quot;</bucket>
+            </map>
+            <map to='#6798c1'>
+              <bucket>&quot;2025-03&quot;</bucket>
+            </map>
+            <map to='#7eaed3'>
+              <bucket>&quot;2025-02&quot;</bucket>
+            </map>
+            <map to='#9ac6e4'>
+              <bucket>&quot;2025-01&quot;</bucket>
+            </map>
+            <map to='#b9ddf1'>
+              <bucket>&quot;2024-12&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='monthly_kpis.csv' id='monthly_kpis.csv_1E91D679251343ABA528E7E2472824D3'>
+            <properties context=''>
+              <relation connection='textscan.0gx5rnx1wh00p70zw4yi41ksc6qo' name='monthly_kpis.csv' table='[monthly_kpis#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='yyyymm' ordinal='0' />
+                  <column datatype='real' name='total_call_minutes' ordinal='1' />
+                  <column datatype='real' name='total_data_gb' ordinal='2' />
+                  <column datatype='real' name='total_sms' ordinal='3' />
+                  <column datatype='real' name='total_revenue' ordinal='4' />
+                  <column datatype='integer' name='active_customers' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='customer_summary' inline='true' name='federated.1dgjpcp1p49fb91bwvp3415ook8o' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='customer_summary' name='textscan.0fmbg0l14mm7d01fmtl4l1fbsun1'>
+            <connection class='textscan' directory='/Users/andreasrafailandrikopoulos/Zone/data-ai-week-2/exports' filename='customer_summary.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0fmbg0l14mm7d01fmtl4l1fbsun1' name='customer_summary.csv' table='[customer_summary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='string' name='customer_id' ordinal='0' />
+            <column datatype='string' name='name' ordinal='1' />
+            <column datatype='string' name='region' ordinal='2' />
+            <column datatype='integer' name='age' ordinal='3' />
+            <column datatype='string' name='plan_type' ordinal='4' />
+            <column datatype='date' name='signup_date' ordinal='5' />
+            <column datatype='real' name='total_call_minutes' ordinal='6' />
+            <column datatype='real' name='total_data_gb' ordinal='7' />
+            <column datatype='real' name='total_sms' ordinal='8' />
+            <column datatype='real' name='total_revenue' ordinal='9' />
+            <column datatype='integer' name='support_tickets' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[customer_id]</local-name>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias>customer_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>plan_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[plan_type]</local-name>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias>plan_type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>signup_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[signup_date]</local-name>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias>signup_date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_call_minutes</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_call_minutes]</local-name>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias>total_call_minutes</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_data_gb</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_data_gb]</local-name>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias>total_data_gb</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_sms</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_sms]</local-name>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias>total_sms</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_revenue]</local-name>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias>total_revenue</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>support_tickets</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[support_tickets]</local-name>
+            <parent-name>[customer_summary.csv]</parent-name>
+            <remote-alias>support_tickets</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Region Clean' datatype='string' name='[Calculation_4154500345968455681]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='UPPER(TRIM([region]))' />
+      </column>
+      <column caption='Signup Year-Month' datatype='date' name='[Calculation_5964877028035117056]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE(DATETRUNC(&apos;month&apos;, [signup_date]))' />
+      </column>
+      <column caption='Is Postpaid' datatype='integer' name='[Calculation_5964877028035305473]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF LOWER([plan_type]) = &apos;postpaid&apos; THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='Postpaid Share' datatype='real' name='[Calculation_5964877028035514370]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_5964877028035305473]) / COUNTD([customer_id])' />
+      </column>
+      <column caption='customer_summary.csv' datatype='table' name='[__tableau_internal_object_id__].[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Customer Id' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Plan Type' datatype='string' name='[plan_type]' role='dimension' type='nominal' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Signup Date' datatype='date' name='[signup_date]' role='dimension' type='ordinal' />
+      <column caption='Support Tickets' datatype='integer' name='[support_tickets]' role='measure' type='quantitative' />
+      <column caption='Total Call Minutes' datatype='real' name='[total_call_minutes]' role='measure' type='quantitative' />
+      <column caption='Total Data Gb' datatype='real' name='[total_data_gb]' role='measure' type='quantitative' />
+      <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+      <column caption='Total Sms' datatype='real' name='[total_sms]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_data_gb]' derivation='Avg' name='[avg:total_data_gb:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_revenue]' derivation='Avg' name='[avg:total_revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[age]' derivation='Sum' name='[sum:age:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[support_tickets]' derivation='Sum' name='[sum:support_tickets:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_call_minutes]' derivation='Sum' name='[sum:total_call_minutes:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_data_gb]' derivation='Sum' name='[sum:total_data_gb:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_sms]' derivation='Sum' name='[sum:total_sms:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/19/8zkztznj0cbbpxr3w_3sdrh80000gn/T/tableau-temp/#TableauTemp_0qxl2yu1hc2hwl1f4dxli09x6v4k.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/28/2025 11:36:31 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>customer_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[customer_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>customer_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>customer_summary.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>95</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>customer_summary.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>95</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>region</remote-alias>
+              <ordinal>2</ordinal>
+              <family>customer_summary.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>3</ordinal>
+              <family>customer_summary.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>plan_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[plan_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>plan_type</remote-alias>
+              <ordinal>4</ordinal>
+              <family>customer_summary.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>signup_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[signup_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>signup_date</remote-alias>
+              <ordinal>5</ordinal>
+              <family>customer_summary.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>90</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_call_minutes</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_call_minutes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_call_minutes</remote-alias>
+              <ordinal>6</ordinal>
+              <family>customer_summary.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>95</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_data_gb</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_data_gb]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_data_gb</remote-alias>
+              <ordinal>7</ordinal>
+              <family>customer_summary.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>95</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_sms</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_sms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_sms</remote-alias>
+              <ordinal>8</ordinal>
+              <family>customer_summary.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>94</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_revenue</remote-alias>
+              <ordinal>9</ordinal>
+              <family>customer_summary.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>95</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>support_tickets</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[support_tickets]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>support_tickets</remote-alias>
+              <ordinal>10</ordinal>
+              <family>customer_summary.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1dgjpcp1p49fb91bwvp3415ook8o].[sum:age:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1dgjpcp1p49fb91bwvp3415ook8o].[avg:total_data_gb:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1dgjpcp1p49fb91bwvp3415ook8o].[sum:total_data_gb:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1dgjpcp1p49fb91bwvp3415ook8o].[sum:total_call_minutes:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.1dgjpcp1p49fb91bwvp3415ook8o].[sum:total_sms:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1dgjpcp1p49fb91bwvp3415ook8o].[sum:support_tickets:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.1dgjpcp1p49fb91bwvp3415ook8o].[avg:total_revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.1dgjpcp1p49fb91bwvp3415ook8o].[sum:total_revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1dgjpcp1p49fb91bwvp3415ook8o].[__tableau_internal_object_id__].[cnt:customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='customer_summary.csv' id='customer_summary.csv_9B11949ED7234B18B1C8CB575BE09BEB'>
+            <properties context=''>
+              <relation connection='textscan.0fmbg0l14mm7d01fmtl4l1fbsun1' name='customer_summary.csv' table='[customer_summary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='string' name='customer_id' ordinal='0' />
+                  <column datatype='string' name='name' ordinal='1' />
+                  <column datatype='string' name='region' ordinal='2' />
+                  <column datatype='integer' name='age' ordinal='3' />
+                  <column datatype='string' name='plan_type' ordinal='4' />
+                  <column datatype='date' name='signup_date' ordinal='5' />
+                  <column datatype='real' name='total_call_minutes' ordinal='6' />
+                  <column datatype='real' name='total_data_gb' ordinal='7' />
+                  <column datatype='real' name='total_sms' ordinal='8' />
+                  <column datatype='real' name='total_revenue' ordinal='9' />
+                  <column datatype='integer' name='support_tickets' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='churn_risk_indicators' inline='true' name='federated.1v0cm7e1midszf1duy7it077fckt' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='churn_risk_indicators' name='textscan.16oophw0cr51by11nv2jk0zhw3sb'>
+            <connection class='textscan' directory='/Users/andreasrafailandrikopoulos/Zone/data-ai-week-2/exports' filename='churn_risk_indicators.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.16oophw0cr51by11nv2jk0zhw3sb' name='churn_risk_indicators.csv' table='[churn_risk_indicators#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='string' name='customer_id' ordinal='0' />
+            <column datatype='string' name='name' ordinal='1' />
+            <column datatype='string' name='region' ordinal='2' />
+            <column datatype='string' name='plan_type' ordinal='3' />
+            <column datatype='integer' name='unpaid_invoices' ordinal='4' />
+            <column datatype='integer' name='total_tickets' ordinal='5' />
+            <column datatype='boolean' name='is_churn_risk' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[churn_risk_indicators.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[customer_id]</local-name>
+            <parent-name>[churn_risk_indicators.csv]</parent-name>
+            <remote-alias>customer_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[churn_risk_indicators.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[churn_risk_indicators.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>plan_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[plan_type]</local-name>
+            <parent-name>[churn_risk_indicators.csv]</parent-name>
+            <remote-alias>plan_type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unpaid_invoices</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[unpaid_invoices]</local-name>
+            <parent-name>[churn_risk_indicators.csv]</parent-name>
+            <remote-alias>unpaid_invoices</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_tickets</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_tickets]</local-name>
+            <parent-name>[churn_risk_indicators.csv]</parent-name>
+            <remote-alias>total_tickets</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_churn_risk</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_churn_risk]</local-name>
+            <parent-name>[churn_risk_indicators.csv]</parent-name>
+            <remote-alias>is_churn_risk</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Risk Score' datatype='integer' name='[Calculation_4154500345972146178]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[unpaid_invoices]*2 + [total_tickets]' />
+      </column>
+      <column caption='churn_risk_indicators.csv' datatype='table' name='[__tableau_internal_object_id__].[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]' role='measure' type='quantitative' />
+      <column caption='Customer Id' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+      <column caption='Is Churn Risk' datatype='boolean' name='[is_churn_risk]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Plan Type' datatype='string' name='[plan_type]' role='dimension' type='nominal' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Total Tickets' datatype='integer' name='[total_tickets]' role='measure' type='quantitative' />
+      <column caption='Unpaid Invoices' datatype='integer' name='[unpaid_invoices]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/19/8zkztznj0cbbpxr3w_3sdrh80000gn/T/tableau-temp/#TableauTemp_1b4d1sv0odaw4p1bozr4i05ik013.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/28/2025 11:36:44 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>customer_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[customer_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>customer_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>churn_risk_indicators.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>95</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>churn_risk_indicators.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>95</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>region</remote-alias>
+              <ordinal>2</ordinal>
+              <family>churn_risk_indicators.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>plan_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[plan_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>plan_type</remote-alias>
+              <ordinal>3</ordinal>
+              <family>churn_risk_indicators.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>unpaid_invoices</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[unpaid_invoices]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>unpaid_invoices</remote-alias>
+              <ordinal>4</ordinal>
+              <family>churn_risk_indicators.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_tickets</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_tickets]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_tickets</remote-alias>
+              <ordinal>5</ordinal>
+              <family>churn_risk_indicators.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_churn_risk</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[is_churn_risk]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_churn_risk</remote-alias>
+              <ordinal>6</ordinal>
+              <family>churn_risk_indicators.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='churn_risk_indicators.csv' id='churn_risk_indicators.csv_B8671A09E66C4DE8B1B27046CF31E077'>
+            <properties context=''>
+              <relation connection='textscan.16oophw0cr51by11nv2jk0zhw3sb' name='churn_risk_indicators.csv' table='[churn_risk_indicators#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='string' name='customer_id' ordinal='0' />
+                  <column datatype='string' name='name' ordinal='1' />
+                  <column datatype='string' name='region' ordinal='2' />
+                  <column datatype='string' name='plan_type' ordinal='3' />
+                  <column datatype='integer' name='unpaid_invoices' ordinal='4' />
+                  <column datatype='integer' name='total_tickets' ordinal='5' />
+                  <column datatype='boolean' name='is_churn_risk' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='support_metrics.csv (Multiple Connections)' inline='true' name='federated.08blybm05o9tez10vpi1m1trnbuo' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='support_metrics' name='textscan.0q4kn5k11gbz1119a7q9800azxmh'>
+            <connection class='textscan' directory='/Users/andreasrafailandrikopoulos/Zone/data-ai-week-2/exports' filename='support_metrics.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='churn_risk_indicators' name='textscan.1ieng3w02uctaf10epxp0080318q'>
+            <connection class='textscan' directory='/Users/andreasrafailandrikopoulos/Zone/data-ai-week-2/exports' filename='churn_risk_indicators.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='customer_summary' name='textscan.0q7kkgp1ifmufj10t66f60m1rosl'>
+            <connection class='textscan' directory='/Users/andreasrafailandrikopoulos/Zone/data-ai-week-2/exports' filename='customer_summary.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='monthly_kpis' name='textscan.0y9ykfo18qdpue1fnqcq30n2ktdn'>
+            <connection class='textscan' directory='/Users/andreasrafailandrikopoulos/Zone/data-ai-week-2/exports' filename='monthly_kpis.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0q4kn5k11gbz1119a7q9800azxmh' name='support_metrics.csv' table='[support_metrics#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='string' name='region' ordinal='0' />
+            <column datatype='string' name='plan_type' ordinal='1' />
+            <column datatype='integer' name='yyyymm' ordinal='2' />
+            <column datatype='real' name='avg_resolution_hrs' ordinal='3' />
+            <column datatype='real' name='median_resolution_hrs' ordinal='4' />
+            <column datatype='integer' name='ticket_count' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[support_metrics.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[support_metrics.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[support_metrics.csv_34510A029A574F11896F857C2C2C2F3D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>plan_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[plan_type]</local-name>
+            <parent-name>[support_metrics.csv]</parent-name>
+            <remote-alias>plan_type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[support_metrics.csv_34510A029A574F11896F857C2C2C2F3D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>yyyymm</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[yyyymm]</local-name>
+            <parent-name>[support_metrics.csv]</parent-name>
+            <remote-alias>yyyymm</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[support_metrics.csv_34510A029A574F11896F857C2C2C2F3D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_resolution_hrs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_resolution_hrs]</local-name>
+            <parent-name>[support_metrics.csv]</parent-name>
+            <remote-alias>avg_resolution_hrs</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[support_metrics.csv_34510A029A574F11896F857C2C2C2F3D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>median_resolution_hrs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[median_resolution_hrs]</local-name>
+            <parent-name>[support_metrics.csv]</parent-name>
+            <remote-alias>median_resolution_hrs</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[support_metrics.csv_34510A029A574F11896F857C2C2C2F3D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ticket_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ticket_count]</local-name>
+            <parent-name>[support_metrics.csv]</parent-name>
+            <remote-alias>ticket_count</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[support_metrics.csv_34510A029A574F11896F857C2C2C2F3D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Region Clean' datatype='string' name='[Calculation_4154500345972862979]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='UPPER(TRIM([region]))' />
+      </column>
+      <column caption='year month' datatype='string' name='[Calculation_4154500345973551108]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR(INT([yyyymm] / 100)) + &quot;-&quot; + &#10;RIGHT(&quot;00&quot; + STR(INT([yyyymm] % 100)), 2)' />
+      </column>
+      <column caption='support_metrics.csv' datatype='table' name='[__tableau_internal_object_id__].[support_metrics.csv_34510A029A574F11896F857C2C2C2F3D]' role='measure' type='quantitative' />
+      <column caption='Avg Resolution Hrs' datatype='real' name='[avg_resolution_hrs]' role='measure' type='quantitative' />
+      <column caption='Median Resolution Hrs' datatype='real' name='[median_resolution_hrs]' role='measure' type='quantitative' />
+      <column caption='Plan Type' datatype='string' name='[plan_type]' role='dimension' type='nominal' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Ticket Count' datatype='integer' name='[ticket_count]' role='measure' type='quantitative' />
+      <column caption='Yyyymm' datatype='integer' name='[yyyymm]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/19/8zkztznj0cbbpxr3w_3sdrh80000gn/T/tableau-temp/#TableauTemp_14oik230183nn418iwjtb1irhowa.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/30/2025 05:29:13 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>region</remote-alias>
+              <ordinal>0</ordinal>
+              <family>support_metrics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>plan_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[plan_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>plan_type</remote-alias>
+              <ordinal>1</ordinal>
+              <family>support_metrics.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>yyyymm</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[yyyymm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>yyyymm</remote-alias>
+              <ordinal>2</ordinal>
+              <family>support_metrics.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_resolution_hrs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_resolution_hrs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_resolution_hrs</remote-alias>
+              <ordinal>3</ordinal>
+              <family>support_metrics.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>35</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>median_resolution_hrs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[median_resolution_hrs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>median_resolution_hrs</remote-alias>
+              <ordinal>4</ordinal>
+              <family>support_metrics.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ticket_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ticket_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ticket_count</remote-alias>
+              <ordinal>5</ordinal>
+              <family>support_metrics.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='support_metrics.csv' id='support_metrics.csv_34510A029A574F11896F857C2C2C2F3D'>
+            <properties context=''>
+              <relation connection='textscan.0q4kn5k11gbz1119a7q9800azxmh' name='support_metrics.csv' table='[support_metrics#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='string' name='region' ordinal='0' />
+                  <column datatype='string' name='plan_type' ordinal='1' />
+                  <column datatype='integer' name='yyyymm' ordinal='2' />
+                  <column datatype='real' name='avg_resolution_hrs' ordinal='3' />
+                  <column datatype='real' name='median_resolution_hrs' ordinal='4' />
+                  <column datatype='integer' name='ticket_count' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Churn Risk Customers'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='churn_risk_indicators' name='federated.1v0cm7e1midszf1duy7it077fckt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1v0cm7e1midszf1duy7it077fckt'>
+            <column caption='Risk Score' datatype='integer' name='[Calculation_4154500345972146178]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[unpaid_invoices]*2 + [total_tickets]' />
+            </column>
+            <column caption='Customer Id' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+            <column caption='Is Churn Risk' datatype='boolean' name='[is_churn_risk]' role='dimension' type='nominal' />
+            <column-instance column='[customer_id]' derivation='None' name='[none:customer_id:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_churn_risk]' derivation='None' name='[none:is_churn_risk:nk]' pivot='key' type='nominal' />
+            <column-instance column='[plan_type]' derivation='None' name='[none:plan_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Plan Type' datatype='string' name='[plan_type]' role='dimension' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_4154500345972146178]' derivation='Sum' name='[sum:Calculation_4154500345972146178:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_tickets]' derivation='Sum' name='[sum:total_tickets:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[unpaid_invoices]' derivation='Sum' name='[sum:unpaid_invoices:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Tickets' datatype='integer' name='[total_tickets]' role='measure' type='quantitative' />
+            <column caption='Unpaid Invoices' datatype='integer' name='[unpaid_invoices]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1v0cm7e1midszf1duy7it077fckt].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1v0cm7e1midszf1duy7it077fckt].[sum:total_tickets:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1v0cm7e1midszf1duy7it077fckt].[sum:unpaid_invoices:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1v0cm7e1midszf1duy7it077fckt].[none:is_churn_risk:nk]'>
+            <groupfilter function='member' level='[none:is_churn_risk:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1v0cm7e1midszf1duy7it077fckt].[none:customer_id:nk]' direction='DESC' measure-to-sort-by='[federated.1v0cm7e1midszf1duy7it077fckt].[sum:total_tickets:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1v0cm7e1midszf1duy7it077fckt].[none:is_churn_risk:nk]</column>
+            <column>[federated.1v0cm7e1midszf1duy7it077fckt].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1v0cm7e1midszf1duy7it077fckt].[:Measure Names]' value='163' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1v0cm7e1midszf1duy7it077fckt].[sum:Calculation_4154500345972146178:qk]' />
+              <text column='[federated.1v0cm7e1midszf1duy7it077fckt].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1v0cm7e1midszf1duy7it077fckt].[none:customer_id:nk] / ([federated.1v0cm7e1midszf1duy7it077fckt].[none:region:nk] / [federated.1v0cm7e1midszf1duy7it077fckt].[none:plan_type:nk]))</rows>
+        <cols>[federated.1v0cm7e1midszf1duy7it077fckt].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{35C6B444-08CE-4A19-B706-5D51CB98CA4B}' />
+    </worksheet>
+    <worksheet name='Monthly Revenue Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='monthly_kpis' name='federated.00klc5z0sxsw861fa80yw0i3jmkr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00klc5z0sxsw861fa80yw0i3jmkr'>
+            <column caption='Year Month' datatype='string' name='[Calculation_4154500345965322240]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='STR(INT([yyyymm] / 100)) + &quot;-&quot; + &#10;RIGHT(&quot;00&quot; + STR(INT([yyyymm] % 100)), 2)' />
+            </column>
+            <column-instance column='[Calculation_4154500345965322240]' derivation='None' name='[none:Calculation_4154500345965322240:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+            <column caption='Yyyymm' datatype='integer' name='[yyyymm]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.00klc5z0sxsw861fa80yw0i3jmkr].[none:Calculation_4154500345965322240:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.00klc5z0sxsw861fa80yw0i3jmkr].[sum:total_revenue:qk]</rows>
+        <cols>[federated.00klc5z0sxsw861fa80yw0i3jmkr].[none:Calculation_4154500345965322240:nk]</cols>
+      </table>
+      <simple-id uuid='{60EB558F-531B-402D-B2EF-7DAB175AAD51}' />
+    </worksheet>
+    <worksheet name='Plan - Usage &amp; Billing(AVG)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000'>Average Usage (GB) &amp; Revenue by Plan Type </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_summary' name='federated.1dgjpcp1p49fb91bwvp3415ook8o' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dgjpcp1p49fb91bwvp3415ook8o'>
+            <column-instance column='[total_data_gb]' derivation='Avg' name='[avg:total_data_gb:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_revenue]' derivation='Avg' name='[avg:total_revenue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[plan_type]' derivation='None' name='[none:plan_type:nk]' pivot='key' type='nominal' />
+            <column caption='Plan Type' datatype='string' name='[plan_type]' role='dimension' type='nominal' />
+            <column caption='Total Data Gb' datatype='real' name='[total_data_gb]' role='measure' type='quantitative' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dgjpcp1p49fb91bwvp3415ook8o].[avg:total_data_gb:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dgjpcp1p49fb91bwvp3415ook8o].[avg:total_revenue:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:plan_type:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:plan_type:nk]' member='&quot;Postpaid&quot;' />
+              <groupfilter function='member' level='[none:plan_type:nk]' member='&quot;Prepaid&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1dgjpcp1p49fb91bwvp3415ook8o].[:Measure Names]</column>
+            <column>[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:plan_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[avg:total_revenue:qk]' value='n#,##0;-#,##0' />
+            <format attr='text-format' field='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[avg:total_data_gb:qk]' value='n#,##0.0;-#,##0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1dgjpcp1p49fb91bwvp3415ook8o].[Multiple Values]</rows>
+        <cols>[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:plan_type:nk]</cols>
+      </table>
+      <simple-id uuid='{992D8C5A-86C4-4F22-98E5-DCBC0F9E2C2A}' />
+    </worksheet>
+    <worksheet name='Postpaid Share of New Signups'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_summary' name='federated.1dgjpcp1p49fb91bwvp3415ook8o' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dgjpcp1p49fb91bwvp3415ook8o'>
+            <column caption='Signup Year-Month' datatype='date' name='[Calculation_5964877028035117056]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATETRUNC(&apos;month&apos;, [signup_date]))' />
+            </column>
+            <column caption='Is Postpaid' datatype='integer' name='[Calculation_5964877028035305473]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF LOWER([plan_type]) = &apos;postpaid&apos; THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Postpaid Share' datatype='real' name='[Calculation_5964877028035514370]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_5964877028035305473]) / COUNTD([customer_id])' />
+            </column>
+            <column caption='Customer Id' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+            <column caption='Plan Type' datatype='string' name='[plan_type]' role='dimension' type='nominal' />
+            <column caption='Signup Date' datatype='date' name='[signup_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_5964877028035514370]' derivation='User' name='[usr:Calculation_5964877028035514370:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_5964877028035117056]' derivation='Year' name='[yr:Calculation_5964877028035117056:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1dgjpcp1p49fb91bwvp3415ook8o].[usr:Calculation_5964877028035514370:qk]</rows>
+        <cols>[federated.1dgjpcp1p49fb91bwvp3415ook8o].[yr:Calculation_5964877028035117056:ok]</cols>
+      </table>
+      <simple-id uuid='{111897F8-2473-4090-8956-A56A960EA8C9}' />
+    </worksheet>
+    <worksheet name='Support Perf by Region'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000'>Avg Resolution Time (hrs) by Region </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='support_metrics.csv (Multiple Connections)' name='federated.08blybm05o9tez10vpi1m1trnbuo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08blybm05o9tez10vpi1m1trnbuo'>
+            <column caption='Region Clean' datatype='string' name='[Calculation_4154500345972862979]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='UPPER(TRIM([region]))' />
+            </column>
+            <column caption='year month' datatype='string' name='[Calculation_4154500345973551108]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='STR(INT([yyyymm] / 100)) + &quot;-&quot; + &#10;RIGHT(&quot;00&quot; + STR(INT([yyyymm] % 100)), 2)' />
+            </column>
+            <column-instance column='[avg_resolution_hrs]' derivation='Avg' name='[avg:avg_resolution_hrs:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Resolution Hrs' datatype='real' name='[avg_resolution_hrs]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_4154500345972862979]' derivation='None' name='[none:Calculation_4154500345972862979:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_4154500345973551108]' derivation='None' name='[none:Calculation_4154500345973551108:nk]' pivot='key' type='nominal' />
+            <column-instance column='[plan_type]' derivation='None' name='[none:plan_type:nk]' pivot='key' type='nominal' />
+            <column caption='Plan Type' datatype='string' name='[plan_type]' role='dimension' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Yyyymm' datatype='integer' name='[yyyymm]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08blybm05o9tez10vpi1m1trnbuo].[none:Calculation_4154500345973551108:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_4154500345973551108:nk]' member='&quot;2024-12&quot;' />
+              <groupfilter function='member' level='[none:Calculation_4154500345973551108:nk]' member='&quot;2025-01&quot;' />
+              <groupfilter function='member' level='[none:Calculation_4154500345973551108:nk]' member='&quot;2025-02&quot;' />
+              <groupfilter function='member' level='[none:Calculation_4154500345973551108:nk]' member='&quot;2025-03&quot;' />
+              <groupfilter function='member' level='[none:Calculation_4154500345973551108:nk]' member='&quot;2025-04&quot;' />
+              <groupfilter function='member' level='[none:Calculation_4154500345973551108:nk]' member='&quot;2025-05&quot;' />
+              <groupfilter function='member' level='[none:Calculation_4154500345973551108:nk]' member='&quot;2025-06&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.08blybm05o9tez10vpi1m1trnbuo].[none:plan_type:nk]'>
+            <groupfilter function='level-members' level='[none:plan_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.08blybm05o9tez10vpi1m1trnbuo].[none:Calculation_4154500345972862979:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.08blybm05o9tez10vpi1m1trnbuo].[avg:avg_resolution_hrs:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.08blybm05o9tez10vpi1m1trnbuo].[none:Calculation_4154500345973551108:nk]</column>
+            <column>[federated.08blybm05o9tez10vpi1m1trnbuo].[none:plan_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08blybm05o9tez10vpi1m1trnbuo].[avg:avg_resolution_hrs:qk]</rows>
+        <cols>[federated.08blybm05o9tez10vpi1m1trnbuo].[none:Calculation_4154500345972862979:nk]</cols>
+      </table>
+      <simple-id uuid='{42E050A3-AFDA-4C23-98ED-2F7387D7A133}' />
+    </worksheet>
+    <worksheet name='Top 5 Regions by ARPU'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_summary' name='federated.1dgjpcp1p49fb91bwvp3415ook8o' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dgjpcp1p49fb91bwvp3415ook8o'>
+            <column caption='Region Clean' datatype='string' name='[Calculation_4154500345968455681]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='UPPER(TRIM([region]))' />
+            </column>
+            <column-instance column='[total_revenue]' derivation='Avg' name='[avg:total_revenue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_4154500345968455681]' derivation='None' name='[none:Calculation_4154500345968455681:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:Calculation_4154500345968455681:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[avg:total_revenue:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:Calculation_4154500345968455681:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1dgjpcp1p49fb91bwvp3415ook8o].[avg:total_revenue:qk]</rows>
+        <cols>[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:Calculation_4154500345968455681:nk]</cols>
+      </table>
+      <simple-id uuid='{18181BF2-ADB6-4971-B2F1-B70E80A3A897}' />
+    </worksheet>
+    <worksheet name='Total Active Customers'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_summary' name='federated.1dgjpcp1p49fb91bwvp3415ook8o' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dgjpcp1p49fb91bwvp3415ook8o'>
+            <column-instance column='[customer_id]' derivation='CountD' name='[ctd:customer_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Customer Id' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[ctd:customer_id:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.9670165777206421' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{DFFA7259-0C33-490C-92FD-5AF0B6A639D9}' />
+    </worksheet>
+    <worksheet name='Usage Segmentation'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_summary' name='federated.1dgjpcp1p49fb91bwvp3415ook8o' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dgjpcp1p49fb91bwvp3415ook8o'>
+            <column caption='Customer Id' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+            <column-instance column='[customer_id]' derivation='None' name='[none:customer_id:nk]' pivot='key' type='nominal' />
+            <column-instance column='[plan_type]' derivation='None' name='[none:plan_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_call_minutes]' derivation='None' name='[none:total_call_minutes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_data_gb]' derivation='None' name='[none:total_data_gb:qk]' pivot='key' type='quantitative' />
+            <column caption='Plan Type' datatype='string' name='[plan_type]' role='dimension' type='nominal' />
+            <column caption='Total Call Minutes' datatype='real' name='[total_call_minutes]' role='measure' type='quantitative' />
+            <column caption='Total Data Gb' datatype='real' name='[total_data_gb]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:plan_type:nk]' />
+              <lod column='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:customer_id:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:total_call_minutes:qk]</rows>
+        <cols>[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:total_data_gb:qk]</cols>
+      </table>
+      <simple-id uuid='{41B6FD0A-1875-4F2E-8249-B19582D6B897}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='churn_risk_indicators' name='federated.1v0cm7e1midszf1duy7it077fckt' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1v0cm7e1midszf1duy7it077fckt'>
+        <column caption='Is Churn Risk' datatype='boolean' name='[is_churn_risk]' role='dimension' type='nominal' />
+        <column-instance column='[is_churn_risk]' derivation='None' name='[none:is_churn_risk:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='45256' id='26' param='horz' type-v2='layout-flow' w='98928' x='536' y='53894'>
+            <zone h='45256' id='22' param='horz' type-v2='layout-flow' w='88204' x='536' y='53894'>
+              <zone h='45256' id='20' type-v2='layout-basic' w='88204' x='536' y='53894'>
+                <zone h='22547' id='16' param='horz' type-v2='layout-flow' w='88204' x='536' y='53894'>
+                  <zone h='22547' id='11' type-v2='layout-basic' w='88204' x='536' y='53894'>
+                    <zone h='22547' id='23' param='horz' type-v2='layout-flow' w='71823' x='16917' y='53894'>
+                      <zone h='22547' id='24' name='Usage Segmentation' w='31274' x='16917' y='53894'>
+                        <layout-cache minwidth='166' type-h='fixed' type-w='scalable' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone fixed-size='597' h='22547' id='28' is-fixed='true' name='Churn Risk Customers' w='40549' x='48191' y='53894'>
+                        <layout-cache type-h='fixed' type-w='fixed' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                    <zone fixed-size='259' h='22547' id='9' is-fixed='true' name='Total Active Customers' w='16381' x='536' y='53894'>
+                      <layout-cache type-h='cell' type-w='cell' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+                <zone h='22709' id='18' name='Top 5 Regions by ARPU' w='88204' x='536' y='76441'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='45256' id='25' is-fixed='true' param='vert' type-v2='layout-flow' w='10724' x='88740' y='53894'>
+              <zone h='7014' id='27' name='Usage Segmentation' pane-specification-id='0' param='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:plan_type:nk]' type-v2='color' w='10724' x='88740' y='53894'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9458' id='29' name='Churn Risk Customers' param='[federated.1v0cm7e1midszf1duy7it077fckt].[none:is_churn_risk:nk]' type-v2='filter' w='10724' x='88740' y='60908'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6907' id='30' name='Churn Risk Customers' pane-specification-id='0' param='[federated.1v0cm7e1midszf1duy7it077fckt].[sum:Calculation_4154500345972146178:qk]' type-v2='color' w='10724' x='88740' y='70366'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='3894' id='31' type-v2='text' w='98928' x='536' y='850'>
+            <formatted-text>
+              <run bold='true' fontname='Tableau Bold' fontsize='22'>Cosmofone Executive Dashboard</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='3894' id='7' type-v2='text' w='98928' x='536' y='4744'>
+            <formatted-text>
+              <run bold='true' fontsize='18'>Executive Overview</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='45256' id='14' name='Monthly Revenue Trend' w='98928' x='536' y='8638'>
+            <layout-cache cell-count-w='7' minheight='164' non-cell-size-w='60' type-h='scalable' type-w='cell' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97714' id='3' param='vert' type-v2='layout-flow' w='95734' x='2133' y='1143' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{06E78BA6-3AF2-40E5-BDDE-8BB8299DFEAD}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='text-align' id='dash-text_5' value='center' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='94049' id='3' param='vert' type-v2='layout-flow' w='98928' x='536' y='5101'>
+            <zone fixed-size='502' h='27948' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='98928' x='536' y='5101'>
+              <zone forceUpdate='true' h='3613' id='7' type-v2='text' w='98928' x='536' y='5101'>
+                <formatted-text>
+                  <run bold='true' fontalignment='1' fontcolor='#555555' fontname='Tableau Semibold' fontsize='14'>Executive Overview</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='24335' id='14' param='vert' type-v2='layout-flow' w='98928' x='536' y='8714' />
+            </zone>
+            <zone forceUpdate='true' h='3401' id='12' type-v2='text' w='98928' x='536' y='33049'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#555555' fontname='Tableau Semibold' fontsize='14'>Customer Insights </run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='641' forceUpdate='true' h='27948' id='9' is-fixed='true' type-v2='text' w='98928' x='536' y='36450'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='3401' id='13' type-v2='text' w='98928' x='536' y='64398'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#555555' fontname='Tableau Semibold' fontsize='14'>Plan Performance </run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='651' forceUpdate='true' h='27948' id='11' is-fixed='true' type-v2='text' w='98928' x='536' y='67799'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='3403' id='8' param='vert' type-v2='layout-flow' w='98928' x='536' y='95747'>
+              <zone h='3403' id='10' param='vert' type-v2='layout-flow' w='98928' x='536' y='95747' />
+            </zone>
+          </zone>
+          <zone h='4251' id='5' type-v2='text' w='98928' x='536' y='850'>
+            <formatted-text>
+              <run bold='true' fontname='Tableau Bold' fontsize='18'>Cosmofone Dashboard</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{2A6AF6A4-378D-4A94-AE2E-4C0714AF846E}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='93'>
+    <window class='worksheet' name='Total Active Customers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{618A96F9-3F72-4EC7-865E-1F5D821EF844}' />
+    </window>
+    <window class='worksheet' name='Monthly Revenue Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.00klc5z0sxsw861fa80yw0i3jmkr].[none:Calculation_4154500345965322240:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FB0A4658-0F43-435E-A272-32B5D5C6FB82}' />
+    </window>
+    <window class='worksheet' name='Top 5 Regions by ARPU'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:Calculation_4154500345968455681:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0D43C28C-9DC1-4C24-804C-8BF3DC755B7C}' />
+    </window>
+    <window class='worksheet' name='Usage Segmentation'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[none:plan_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8214661A-2100-4A2F-B771-B37498CAC830}' />
+    </window>
+    <window class='worksheet' name='Churn Risk Customers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1v0cm7e1midszf1duy7it077fckt].[none:is_churn_risk:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1v0cm7e1midszf1duy7it077fckt].[sum:Calculation_4154500345972146178:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FD866191-D1FC-4870-BD86-077FBC053806}' />
+    </window>
+    <window class='worksheet' name='Support Perf by Region'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.08blybm05o9tez10vpi1m1trnbuo].[none:plan_type:nk]' type='filter' />
+            <card param='[federated.08blybm05o9tez10vpi1m1trnbuo].[none:Calculation_4154500345973551108:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8ABF5EFA-4079-455A-8FE7-3317B63F15E7}' />
+    </window>
+    <window class='worksheet' name='Plan - Usage &amp; Billing(AVG)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[:Measure Names]' show-morefewerbutton='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.1dgjpcp1p49fb91bwvp3415ook8o].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{361B73E6-EA6B-4743-A613-9D08EDB2E47B}' />
+    </window>
+    <window class='worksheet' name='Postpaid Share of New Signups'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3BBBA282-509A-472A-A02B-63B9A026476A}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Churn Risk Customers' />
+        <viewpoint name='Monthly Revenue Trend'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='2' />
+        </viewpoint>
+        <viewpoint name='Top 5 Regions by ARPU'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Active Customers'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Usage Segmentation'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='14' />
+      <simple-id uuid='{2DFFD525-0716-48A5-B847-B2B94F26DAA6}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 2'>
+      <viewpoints />
+      <active id='14' />
+      <simple-id uuid='{17F5DEB5-05C1-4B43-A4A8-417F7105BD96}' />
+    </window>
+  </windows>
+</workbook>
